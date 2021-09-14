@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build -t angular-app .
-      
+           docker run -p 89:80 angular-app
 
 
             
