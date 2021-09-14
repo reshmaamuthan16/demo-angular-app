@@ -18,7 +18,7 @@ jobs:
       run: docker build -t angular-app .
            
     - name: Run the Docker image       
-      run: docker run -p 89:80 angular-app
+      run: docker run -p 99:80 angular-app
 
 
             
