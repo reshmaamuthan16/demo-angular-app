@@ -1,0 +1,32 @@
+name: demo angular-app
+
+on: 
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2 
+      - name: Run a multi-line script
+        run: 
+          version: '3.3'
+          
+          services:
+            angular: 
+              build: 
+                context: . 
+                dockerfile: Dockerfile
+              ports:
+                - '86:80'    
+              container_name: angular-app
+
+
+            
+
+ 
+ 
+        
